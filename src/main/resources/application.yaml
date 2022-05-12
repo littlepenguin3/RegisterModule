@@ -1,0 +1,51 @@
+mybatis-plus:
+  type-aliases-package: sysu.usc.registerModule.domain
+spring:
+  application:
+    name: registerModule
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/usc?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+  redis:
+    host: 192.168.134.134
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+
+selenium:
+  isHeadless: false
+  waitService:
+    amount: 30000
+    unit: ms
+  waitException:
+    amount: 333
+    unit: ms
+  chromeDriver:
+    name: "webdriver.chrome.driver"
+    path: "E:\\driver\\chromedriver.exe"
+  web:
+    url: "https://bmc.sysu.edu.cn/arsys/shared/login.jsp?/arsys/"
+    username: "huanghy97"
+    password: "huanghy97123"
+    xpaths:
+      username: "/html/body/table/tbody/tr[1]/td/table[2]/tbody/tr/td[2]/table/tbody/tr[2]/td[3]/input"
+      password: "/html/body/table/tbody/tr[1]/td/table[2]/tbody/tr/td[2]/table/tbody/tr[3]/td[3]/input"
+      loginButton: "/html/body/table/tbody/tr[1]/td/table[2]/tbody/tr/td[2]/table/tbody/tr[4]/td[3]/input[1]"
+      application: "/html/body/div[1]/div[5]/div[2]/div/div/div[3]/fieldset/div/div/div/div/div[1]/fieldset/div/div[2]/fieldset/a[1]/div/img"
+      eventManager: "/html/body/div[1]/div[5]/div[5]/div/div[5]/a"
+      searchEvent: "/html/body/div[1]/div[5]/div[5]/div/div[5]/div/div[3]/a"
+      newEvent: "/html/body/div[1]/div[5]/div[5]/div/div[5]/div/div[2]/a"
+      userId: "/html/body/div[1]/div[5]/div[2]/div/div/div[3]/fieldset/div/div/div/div/div[3]/fieldset/div/div/div/div[4]/div[3]/div/div/div[2]/fieldset/div/div/div/div/div[2]/fieldset/div/div/fieldset/div[2]/fieldset/div[2]/textarea"
+      tab: "/html/body/table[2]/tbody/tr/td"
+      name: "/html/body/div[1]/div[5]/div[2]/div/div/div[3]/fieldset/div/div/div/div/div[3]/fieldset/div/div/div/div[4]/div[3]/div/div/div[2]/fieldset/div/div/div/div/div[2]/fieldset/div/div/fieldset/div[2]/fieldset/div[2]/textarea"
+      department: "/html/body/div[1]/div[5]/div[2]/div/div/div[3]/fieldset/div/div/div/div/div[3]/fieldset/div/div/div/div[4]/div[3]/div/div/div[2]/fieldset/div/div/div/div/div[2]/fieldset/div/div/fieldset/div[2]/fieldset/div[13]/textarea"
+      clear: "/html/body/div[1]/div[5]/div[2]/div/div/div[3]/fieldset/div/div/div/div/div[3]/fieldset/div/div/div/div[4]/div[3]/div/div/div[2]/fieldset/div/div/div/div/div[2]/fieldset/div/div/fieldset/div[2]/fieldset/a[5]/div"
+      closeFrame: "/html/body/div[3]/table/tbody/tr[2]/td/iframe"
+      close: "/html/body/div[1]/div[5]/div[2]/div/div/div[1]/fieldset/div/div[2]/fieldset/a[6]/div/div"
+      closeButton: "/html/body/div[2]/a[1]"
