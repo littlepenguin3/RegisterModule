@@ -1,13 +1,16 @@
 package sysu.usc.registerModule.domain;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import sysu.usc.registerModule.domain.template.BaseObject;
+
+import java.sql.Timestamp;
 
 /**
  * @author little-penguin
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
+@TableName(value = "tb_school_card")
 public class SchoolCard extends BaseObject {
+
 }

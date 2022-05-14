@@ -1,4 +1,4 @@
-package sysu.usc.registerModule.VO;
+package sysu.usc.registerModule.constants;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,4 +23,5 @@ public class Xpaths {
     public String closeFrame;
     public String close;
     public String closeButton;
+    public String quitConfirm;
 }

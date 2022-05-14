@@ -26,7 +26,7 @@ public class RegisterModuleApplication {
             return new Thread(r, "ThreadPool thread: " + integer.getAndIncrement());
         }
     };
-    @Bean
+    @Bean("persistenceThreadPool")
     ThreadPoolExecutor newFixedThreadPool(){
         return new ThreadPoolExecutor(8, 8, 2, TimeUnit.MINUTES,
                 new ArrayBlockingQueue<>(512),threadFactory

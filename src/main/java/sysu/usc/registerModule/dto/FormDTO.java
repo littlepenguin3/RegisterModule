@@ -6,8 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 统一接受所有表单
- * @author little-penguin
+ * <p>
+ *      接收前端表单接口数据类，以json形式接收
+ * </p>
+ * @author littlepenguin
+ * @since 2022/05/14 9:23
  */
 @Data
 @NoArgsConstructor
@@ -16,16 +19,11 @@ public class FormDTO {
     /**
      * 学工号
      */
-    String id;
+    String userId;
     /**
      * 手机号
      */
     String phoneNumber;
-    /**
-     * 签名图片base64
-     */
-    @JSONField(serialize = false)
-    String signatureBase64;
     /**
      * 类型
      */
@@ -34,8 +32,9 @@ public class FormDTO {
      * 数量
      */
     Long quantity;
+
     /**
-     * 时间戳
+     * 签名图片base64
      */
-    Long timeStamp;
+    String signatureBase64;
 }

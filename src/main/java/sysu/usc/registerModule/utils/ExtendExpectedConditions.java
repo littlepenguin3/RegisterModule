@@ -1,10 +1,7 @@
 package sysu.usc.registerModule.utils;
 
 import cn.hutool.core.util.StrUtil;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 
 public class ExtendExpectedConditions {
@@ -18,6 +15,32 @@ public class ExtendExpectedConditions {
                 } catch (StaleElementReferenceException e) {
                     return false;
                 }
+            }
+        };
+    }
+    public static ExpectedCondition<Boolean> handleAlert(Boolean handle) {
+        return new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                Alert alert = null;
+                try {
+                    alert = driver.switchTo().alert();
+                } catch (NoAlertPresentException e) {
+                    return true;
+                }
+                if(alert != null){
+                    if(Boolean.TRUE.equals(handle)) {
+                        alert.accept();
+                    }else {
+                        alert.dismiss();
+                    }
+                }
+                return true;
+            }
+
+            @Override
+            public String toString() {
+                return "alert to be present";
             }
         };
     }

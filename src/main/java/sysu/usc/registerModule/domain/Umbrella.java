@@ -12,15 +12,11 @@ import sysu.usc.registerModule.domain.template.BaseObject;
 @EqualsAndHashCode(callSuper = true)
 public class Umbrella extends BaseObject {
     /**
-     * 是否归还
-     */
-    boolean isReturn;
-    /**
      * 归还时间
      */
-    String returnTimeStamp;
+    Long returnTimeStamp;
     /**
      * 数量
      */
-    String quantity;
+    Long quantity;
 }

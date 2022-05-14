@@ -6,10 +6,9 @@ import cn.hutool.core.util.StrUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.AbstractDriverOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.stereotype.Component;
-import sysu.usc.registerModule.VO.Selenium;
+import sysu.usc.registerModule.constants.Selenium;
 import sysu.usc.registerModule.exception.WebDriverNotMatchException;
 
 import javax.annotation.Resource;

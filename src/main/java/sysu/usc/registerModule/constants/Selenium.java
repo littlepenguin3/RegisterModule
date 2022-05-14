@@ -1,4 +1,4 @@
-package sysu.usc.registerModule.VO;
+package sysu.usc.registerModule.constants;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

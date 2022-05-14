@@ -1,5 +1,6 @@
-package sysu.usc.registerModule.dto;
+package sysu.usc.registerModule.VO;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,7 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class Result {
     private Boolean success;
     private String errorMsg;

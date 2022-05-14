@@ -8,6 +8,7 @@ class RegisterModuleApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println(System.currentTimeMillis());
     }
 
 }

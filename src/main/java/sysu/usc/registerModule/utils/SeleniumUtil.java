@@ -1,5 +1,6 @@
 package sysu.usc.registerModule.utils;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -119,5 +120,18 @@ public class SeleniumUtil {
     public static void switchToFrameByXpath(WebDriver driver, WebDriverWait wait, String xpath){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         driver.switchTo().frame(driver.findElement(By.xpath(xpath)));
+    }
+
+    public static void handlePrompt(WebDriver driver, WebDriverWait wait,Boolean handle){
+        wait.until(ExtendExpectedConditions.handleAlert(handle));
+    }
+    public static void acceptPrompt(WebDriver driver, WebDriverWait wait){
+        handlePrompt(driver,wait,true);
+    }
+    public static void dismissPrompt(WebDriver driver, WebDriverWait wait){
+        handlePrompt(driver,wait,false);
+    }
+    public static void safeCheckTextInElementLocatedByXpath(String xpath,String checkText){
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(xpath),checkText));
     }
 }

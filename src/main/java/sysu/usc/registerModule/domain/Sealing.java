@@ -11,11 +11,11 @@ import sysu.usc.registerModule.domain.template.BaseObject;
 @EqualsAndHashCode(callSuper = true)
 public class Sealing extends BaseObject {
     /**
-     * 枚举类
+     * 类型 字符串
      */
-    int type;
+    String type;
     /**
      * 数量
      */
-    int quantity;
+    Long quantity;
 }
